@@ -7,7 +7,7 @@ Summary:	Library for reading and writing Jcat files
 Summary(pl.UTF-8):	Biblioteka do odczytu i zapisu plików Jcat
 Name:		libjcat
 Version:	0.1.1
-Release:	1
+Release:	2
 License:	LGPL v2.1+
 Group:		Libraries
 Source0:	https://people.freedesktop.org/~hughsient/releases/%{name}-%{version}.tar.xz
@@ -117,7 +117,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %ninja_install -C build
 
-%{__rm} -r $RPM_BUILD_ROOT%{_libdir}/installed-tests \
+%{__rm} -r $RPM_BUILD_ROOT%{_libexecdir}/installed-tests \
 	$RPM_BUILD_ROOT%{_datadir}/installed-tests
 
 %clean
