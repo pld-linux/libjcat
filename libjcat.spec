@@ -15,6 +15,7 @@ Source0:	https://people.freedesktop.org/~hughsient/releases/%{name}-%{version}.t
 URL:		https://github.com/hughsie/libjcat
 BuildRequires:	glib2-devel >= 1:2.45.8
 BuildRequires:	gnutls-devel >= 3.6.0
+BuildRequires:	gobject-introspection-devel
 BuildRequires:	gpgme-devel
 %{?with_apidocs:BuildRequires:	gtk-doc}
 BuildRequires:	json-glib-devel >= 1.1.1
@@ -26,6 +27,7 @@ BuildRequires:	pkgconfig
 BuildRequires:	rpm-build >= 4.6
 BuildRequires:	rpmbuild(macros) >= 1.736
 BuildRequires:	tar >= 1:1.22
+BuildRequires:	vala
 BuildRequires:	xz
 Requires:	glib2 >= 1:2.45.8
 Requires:	gnutls >= 3.6.0
