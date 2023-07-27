@@ -6,12 +6,13 @@
 Summary:	Library for reading and writing Jcat files
 Summary(pl.UTF-8):	Biblioteka do odczytu i zapisu plików Jcat
 Name:		libjcat
-Version:	0.1.12
+Version:	0.1.14
 Release:	1
 License:	LGPL v2.1+
 Group:		Libraries
-Source0:	https://people.freedesktop.org/~hughsient/releases/%{name}-%{version}.tar.xz
-# Source0-md5:	f08701b2a93a9848d78103efafcf00e8
+#Source0Download: https://github.com/hughsie/libjcat/releases
+Source0:	https://github.com/hughsie/libjcat/releases/download/%{version}/%{name}-%{version}.tar.xz
+# Source0-md5:	fcfbfdfb3002ca2ade4f0b382c397cd5
 URL:		https://github.com/hughsie/libjcat
 BuildRequires:	glib2-devel >= 1:2.45.8
 BuildRequires:	gnutls-devel >= 3.6.0
@@ -20,7 +21,7 @@ BuildRequires:	gpgme-devel
 %{?with_apidocs:BuildRequires:	gtk-doc}
 BuildRequires:	json-glib-devel >= 1.1.1
 BuildRequires:	libgpg-error-devel
-BuildRequires:	meson >= 0.52.0
+BuildRequires:	meson >= 0.56.0
 BuildRequires:	nettle-devel
 BuildRequires:	ninja >= 1.5
 BuildRequires:	pkgconfig
