@@ -6,13 +6,13 @@
 Summary:	Library for reading and writing Jcat files
 Summary(pl.UTF-8):	Biblioteka do odczytu i zapisu plików Jcat
 Name:		libjcat
-Version:	0.1.14
+Version:	0.2.1
 Release:	1
 License:	LGPL v2.1+
 Group:		Libraries
 #Source0Download: https://github.com/hughsie/libjcat/releases
 Source0:	https://github.com/hughsie/libjcat/releases/download/%{version}/%{name}-%{version}.tar.xz
-# Source0-md5:	fcfbfdfb3002ca2ade4f0b382c397cd5
+# Source0-md5:	63c8a81ecf7ddcfe2bc241faef371312
 URL:		https://github.com/hughsie/libjcat
 BuildRequires:	glib2-devel >= 1:2.45.8
 BuildRequires:	gnutls-devel >= 3.6.0
