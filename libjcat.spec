@@ -6,13 +6,13 @@
 Summary:	Library for reading and writing Jcat files
 Summary(pl.UTF-8):	Biblioteka do odczytu i zapisu plików Jcat
 Name:		libjcat
-Version:	0.2.2
+Version:	0.2.3
 Release:	1
 License:	LGPL v2.1+
 Group:		Libraries
 #Source0Download: https://github.com/hughsie/libjcat/releases
 Source0:	https://github.com/hughsie/libjcat/releases/download/%{version}/%{name}-%{version}.tar.xz
-# Source0-md5:	eabb5d829e1e967c70becf21d6ef562e
+# Source0-md5:	7c3537387a1895373a908fba8f64db57
 URL:		https://github.com/hughsie/libjcat
 BuildRequires:	glib2-devel >= 1:2.45.8
 BuildRequires:	gnutls-devel >= 3.6.0
@@ -26,7 +26,7 @@ BuildRequires:	nettle-devel
 BuildRequires:	ninja >= 1.5
 BuildRequires:	pkgconfig
 BuildRequires:	rpm-build >= 4.6
-BuildRequires:	rpmbuild(macros) >= 1.736
+BuildRequires:	rpmbuild(macros) >= 2.042
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	vala
 BuildRequires:	xz
@@ -110,16 +110,16 @@ Dokumentacja API biblioteki Jcat.
 %setup -q
 
 %build
-%meson build \
+%meson \
 	%{!?with_static_libs:--default-library=shared} \
 	%{?with_apidocs:-Dgtkdoc=true}
 
-%ninja_build -C build
+%meson_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%ninja_install -C build
+%meson_install
 
 %{__rm} -r $RPM_BUILD_ROOT%{_libexecdir}/installed-tests \
 	$RPM_BUILD_ROOT%{_datadir}/installed-tests
