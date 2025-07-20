@@ -7,7 +7,7 @@ Summary:	Library for reading and writing Jcat files
 Summary(pl.UTF-8):	Biblioteka do odczytu i zapisu plików Jcat
 Name:		libjcat
 Version:	0.2.3
-Release:	1
+Release:	2
 License:	LGPL v2.1+
 Group:		Libraries
 #Source0Download: https://github.com/hughsie/libjcat/releases
